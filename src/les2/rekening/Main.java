@@ -15,5 +15,17 @@ public class Main {
         System.out.println(r1.toString());
         System.out.println(r2.toString());
         System.out.println(r3);
+
+        Klant k1 = new Klant("Jan", "Nijenoord 1", "Utrecht");
+        Klant k2 = new Klant("Wim", "Nijenoord 340", "Utrecht");
+
+        r1.setRekeninghouder(k1);
+        r2.setRekeninghouder(k2);
+
+        System.out.println();
+        System.out.println(r1);
+        System.out.println(r1.getRekeninghouder());
+        System.out.println(r2);
+        System.out.println(r2.getRekeninghouder());
     }
 }

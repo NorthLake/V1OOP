@@ -3,10 +3,19 @@ package les2.rekening;
 public class Rekening {
     private int nummer;
     private double saldo;
+    private Klant rekeninghouder;
 
     public Rekening(int nr) {
         nummer = nr;
         saldo = 0;
+    }
+
+    public void setRekeninghouder(Klant rekeninghouder) {
+        this.rekeninghouder = rekeninghouder;
+    }
+
+    public Klant getRekeninghouder() {
+        return rekeninghouder;
     }
 
     public int getNummer() {
@@ -30,6 +39,12 @@ public class Rekening {
     }
 
     public String toString() {
-        return "Op rekening " + nummer + " staat " + saldo;
+        String resultaat = "Op rekening " + nummer + " staat €" + saldo;
+        if (rekeninghouder != null) {
+            resultaat += ", en de rekeninghouder is: " + rekeninghouder.getNaam();
+        }
+        return resultaat;
+
+//        return "Op rekening " + nummer + " staat " + saldo + (rekeninghouder == null ? "" : "");
     }
 }
