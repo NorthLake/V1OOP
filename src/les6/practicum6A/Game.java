@@ -7,10 +7,10 @@ public class Game {
     private int releaseJaar;
     private double nieuwprijs;
 
-    public Game(String nm, int rJ, double nwpr) {
+    public Game(String nm, int rJ, double nwPr) {
         this.naam = nm;
         this.releaseJaar = rJ;
-        this.nieuwprijs = nwpr;
+        this.nieuwprijs = nwPr;
     }
 
     public String getNaam() {

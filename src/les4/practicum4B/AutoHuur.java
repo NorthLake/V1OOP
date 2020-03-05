@@ -8,6 +8,9 @@ public class AutoHuur {
     public AutoHuur() {}
 
     public void setAantalDagen(int aD) {
+        if (aD <= 0) {
+            throw new IllegalArgumentException("Aantal dagen kan niet 0 of lager zijn.");
+        }
         this.aantalDagen = aD;
     }
 
@@ -19,8 +22,8 @@ public class AutoHuur {
         this.gehuurdeAuto = gA;
     }
 
-    public String getGehuurdeAuto() {
-        return gehuurdeAuto.toString();
+    public Auto getGehuurdeAuto() {
+        return gehuurdeAuto;
     }
 
     public void setHuurder(Klant k) {
