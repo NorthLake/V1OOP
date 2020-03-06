@@ -42,7 +42,7 @@ public class Persoon {
 
     @Override
     public String toString() {
-        String result = naam + " heeft een budget van €" + budget + " en bezit de volgende games:";
+        String result = naam + " heeft een budget van €" + String.format("%.2f", budget) + " en bezit de volgende games:";
         for (Game g : games) {
             result += "\n" + g;
         }

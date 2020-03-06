@@ -23,7 +23,13 @@ public class Game {
 
     @Override
     public boolean equals(Object andereObject) {
-        return this == andereObject;  // Niet goed, maar voorkomt error.
+        if (andereObject instanceof Game) {
+            Game game = (Game)andereObject;
+            return game.naam.equals(this.naam) &&
+                    game.releaseJaar == this.releaseJaar &&
+                    game.nieuwprijs == this.nieuwprijs;
+        }
+        return false;
     }
 
     @Override
