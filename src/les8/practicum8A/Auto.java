@@ -11,14 +11,14 @@ public class Auto extends Voertuig {
     }
 
     public double huidigeWaarde() {
-        return nieuwprijs - nieuwprijs * Math.pow(0.7, Calendar.YEAR - bouwjaar);
+        return nieuwprijs * Math.pow(0.7, Calendar.getInstance().get(Calendar.YEAR) - bouwjaar);
     }
 
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Auto) {
             Auto auto = (Auto)obj;
-            return auto.kenteken.equals(this.kenteken);
+            return auto.kenteken.equals(this.kenteken) && super.equals(auto);
         }
         return false;
     }

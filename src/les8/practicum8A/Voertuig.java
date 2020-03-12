@@ -1,8 +1,6 @@
 package les8.practicum8A;
 
-import java.util.Calendar;
-
-public abstract class Voertuig {
+public abstract class Voertuig implements Goed{
     private String type;
     protected double nieuwprijs;
     protected int bouwjaar;
@@ -11,6 +9,10 @@ public abstract class Voertuig {
         this.type = tp;
         this.nieuwprijs = pr;
         this.bouwjaar = jaar;
+    }
+
+    public String getType() {
+        return type;
     }
 
     @Override
@@ -26,7 +28,6 @@ public abstract class Voertuig {
 
     @Override
     public String toString() {
-        return "Voertuig: " + type + " met bouwjaar " + bouwjaar + " heeft een waarde van: €" +
-                (nieuwprijs - nieuwprijs * Math.pow(this instanceof Auto ? 0.7 : 0.9, Calendar.YEAR - bouwjaar));
+        return "Voertuig: " + type + ", gebouwd in " + bouwjaar + " heeft een waarde van: €" + String.format("%.2f", huidigeWaarde());
     }
 }
