@@ -1,5 +1,7 @@
 package les8.practicum8A;
 
+import les9.practicum9A.Utils;
+
 public abstract class Voertuig implements Goed{
     private String type;
     protected double nieuwprijs;
@@ -28,6 +30,6 @@ public abstract class Voertuig implements Goed{
 
     @Override
     public String toString() {
-        return "Voertuig: " + type + ", gebouwd in " + bouwjaar + " heeft een waarde van: €" + String.format("%.2f", huidigeWaarde());
+        return "Voertuig: " + type + ", gebouwd in " + bouwjaar + " heeft een waarde van: " + Utils.euroBedrag(huidigeWaarde());
     }
 }

@@ -1,6 +1,7 @@
 package les8.practicum8A;
 
 import java.util.ArrayList;
+import les9.practicum9A.Utils;
 
 public class BedrijfsInventaris {
     private String bedrijfsnaam;
@@ -27,7 +28,7 @@ public class BedrijfsInventaris {
 
     @Override
     public String toString() {
-        String string = "Huidig budget: €" + String.format("%.2f", budget);
+        String string = "Huidig budget: " + Utils.euroBedrag(budget);
         for (Goed goed : alleGoederen) {
             string += "\n" + goed.toString();
         }

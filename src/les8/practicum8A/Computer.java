@@ -1,6 +1,7 @@
 package les8.practicum8A;
 
 import java.util.Calendar;
+import les9.practicum9A.Utils;
 
 public class Computer implements Goed {
     private String type;
@@ -38,6 +39,6 @@ public class Computer implements Goed {
 
     @Override
     public String toString() {
-        return "Computer: " + type + ", geproduceerd in " + productieJaar + " heeft een waarde van: €" + String.format("%.2f", huidigeWaarde());
+        return "Computer: " + type + ", geproduceerd in " + productieJaar + " heeft een waarde van: " + Utils.euroBedrag(huidigeWaarde());
     }
 }
