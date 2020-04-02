@@ -26,14 +26,13 @@ public class Game {
         if (andereObject instanceof Game) {
             Game game = (Game)andereObject;
             return game.naam.equals(this.naam) &&
-                    game.releaseJaar == this.releaseJaar &&
-                    game.nieuwprijs == this.nieuwprijs;
+                    game.releaseJaar == this.releaseJaar;
         }
         return false;
     }
 
     @Override
     public String toString() {
-        return naam + ", uitgegeven in " + releaseJaar + "; nieuwprijs: €" + nieuwprijs + " nu voor: €" + huidigeWaarde();
+        return naam + ", uitgegeven in " + releaseJaar + "; nieuwprijs: " + les9.practicum9A.Utils.euroBedrag(nieuwprijs) + " nu voor: " + les9.practicum9A.Utils.euroBedrag(huidigeWaarde());
     }
 }
