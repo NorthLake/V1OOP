@@ -48,8 +48,8 @@ class VoetbalclubTest {
         vc.verwerkResultaat('v');
         vc.verwerkResultaat('v');
         vc.verwerkResultaat('v');
-        vc.verwerkResultaat('v');
         assertEquals(9, vc.aantalPunten(),"Het aantal punten klopt niet.");
+        assertEquals(8, vc.aantalGespeeld(), "Het aantal gespeelde wedstrijden klopt niet.");
     }
 
     @Test
